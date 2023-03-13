@@ -34,7 +34,7 @@ services:
       - PORT=3001
       - JWT_SECRET=secret_jwt
       - DB_USER=root
-      - DB_PASS=stock
+      - DB_PASS=123456
       - DB_HOST=db
       - DB_PORT=3306
 
