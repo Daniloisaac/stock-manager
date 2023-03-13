@@ -1,9 +1,9 @@
-import { Model, DataTypes } from 'sequelize';
-import sequelize from '../config/SequelizeConfig';
+import { Model, DataTypes } from 'sequelize'
+import sequelize from '../config/SequelizeConfig'
 
 export default class Products extends Model {
-  declare id:number;
-  declare name:string; 
+  declare id:number
+  declare name:string
 }
 
 Products.init({
@@ -11,15 +11,14 @@ Products.init({
     allowNull: false,
     autoIncrement: true,
     primaryKey: true,
-    type: DataTypes.INTEGER,
+    type: DataTypes.INTEGER
   },
   name: {
     allowNull: true,
-    type: DataTypes.STRING,
+    type: DataTypes.STRING
   }
 }, {
   sequelize,
   tableName: 'products',
-  timestamps: false,
+  timestamps: false
 })
-

@@ -1,9 +1,9 @@
-import { Model, DataTypes } from 'sequelize';
-import sequelize from '../config/SequelizeConfig';
+import { Model, DataTypes } from 'sequelize'
+import sequelize from '../config/SequelizeConfig'
 
 export default class Sales extends Model {
-  declare id:number;
-  declare name:string; 
+  declare id:number
+  declare name:string
 }
 
 Sales.init({
@@ -11,14 +11,13 @@ Sales.init({
     allowNull: false,
     autoIncrement: true,
     primaryKey: true,
-    type: DataTypes.INTEGER,
+    type: DataTypes.INTEGER
   },
   date: {
-    type: DataTypes.STRING,
+    type: DataTypes.STRING
   }
 }, {
   sequelize,
   tableName: 'sales',
-  timestamps: false,
+  timestamps: false
 })
-
