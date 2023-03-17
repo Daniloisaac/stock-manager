@@ -3,7 +3,7 @@ import sequelize from '../config/SequelizeConfig'
 
 export default class Sales extends Model {
   declare id:number
-  declare name:string
+  declare date:string
 }
 
 Sales.init({
