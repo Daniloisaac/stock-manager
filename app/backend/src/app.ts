@@ -1,5 +1,6 @@
 import * as express from 'express'
 import ProductsRouter from './router/Products.routes'
+import SalesRouter from './router/Sales.routes'
 
 class App {
   public app: express.Express
@@ -23,6 +24,7 @@ class App {
     this.app.use(express.json())
     this.app.use(accessControl)
     this.app.use('/products', ProductsRouter)
+    this.app.use('/sales', SalesRouter)
   }
 
   public start (PORT: string | number):void {
