@@ -17,4 +17,13 @@ export default class ProductsService {
     const product = await ProductsModel.findByPk(id)
     return product
   }
+
+  public async editingProduct (id: string, name: string) {
+    const product = await ProductsModel.findByPk(id)
+    if (!product) {
+      return {}
+    }
+    const editedProduct = await product.update({ name })
+    return editedProduct
+  }
 }
