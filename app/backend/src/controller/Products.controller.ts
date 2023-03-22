@@ -25,4 +25,11 @@ export default class ProductsController {
     const product = await this._productsService.getProductById(id)
     return res.status(200).send(product)
   }
+
+  public async editingProduct (req: Request, res: Response) {
+    const { id } = req.params
+    const { name } = req.body
+    const product = await this._productsService.editingProduct(id, name)
+    return res.status(200).send(product)
+  }
 }
