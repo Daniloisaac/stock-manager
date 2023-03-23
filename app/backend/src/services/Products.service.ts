@@ -26,4 +26,12 @@ export default class ProductsService {
     const editedProduct = await product.update({ name })
     return editedProduct
   }
+
+  public async deleteProduct (id: string) {
+    const product = await ProductsModel.destroy({ where: { id } })
+    if (!product) {
+      return {}
+    }
+    return product
+  }
 }
