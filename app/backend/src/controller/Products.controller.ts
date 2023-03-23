@@ -32,4 +32,11 @@ export default class ProductsController {
     const product = await this._productsService.editingProduct(id, name)
     return res.status(200).send(product)
   }
+
+  public async deleteProductById (req: Request, res: Response) {
+    const { id } = req.params
+    const product = await this._productsService.deleteProduct(id)
+    if (product) return {}
+    return res.sendStatus(200)
+  }
 }
