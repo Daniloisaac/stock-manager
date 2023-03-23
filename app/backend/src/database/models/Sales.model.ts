@@ -14,7 +14,7 @@ Sales.init({
     type: DataTypes.INTEGER
   },
   date: {
-    type: DataTypes.STRING
+    type: DataTypes.DATE()
   }
 }, {
   sequelize,
